@@ -15,6 +15,8 @@ La primera URL nos muestra un listado de usuarios, y la segunda una lista de tar
 
 2. Modificar el endpoint /todos de manera que devuelva la lista de tareas con sus usuarios respectivos.
 
+La respuesta deberá ser un listado de objetos con la siguiente forma:
+
     {
         "id": 1,
         "title": "delectus aut autem",
@@ -26,7 +28,7 @@ La primera URL nos muestra un listado de usuarios, y la segunda una lista de tar
             "email": "Sincere@april.biz"
         }
     }
-    
+
 3. Modificar el endpoint /users de manera que devuelva una lista de usuarios con sus tareas respectivas, pero solo mostrando las tareas completadas para cada usuario.
 
 La respuesta deberá ser un listado de objetos con la siguiente forma:
