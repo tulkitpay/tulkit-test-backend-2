@@ -3,13 +3,13 @@ const app = express();
 app.use(express.json());
 const PORT = process.env.HTTP_PORT || 3000
 
-// Your code starts here. Placeholders for .get and .post are provided for your convenience.
+// Your code starts here. Placeholders for methods are provided for your convenience.
 
-app.post('', function(req, res) {
+app.post('/todos', function(req, res) {
 
 });
 
-app.get('', function(req, res) {
+app.get('/users', function(req, res) {
 
 });
 

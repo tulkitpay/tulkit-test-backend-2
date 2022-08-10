@@ -7,28 +7,50 @@ Este proyecto requiere el uso de yarn. Para levantarlo, primero instalar las dep
 
 ### Instrucciones ###
 
-1. Crear una base de datos en memoria, la cual almacenara objetos que representan a un candidato y los skills que posee:
+1. Usaremos las dos siguientes URLs: 
+* https://jsonplaceholder.typicode.com/users
+* https://jsonplaceholder.typicode.com/todos
 
-candidato:
+La primera URL nos muestra un listado de usuarios, y la segunda una lista de tareas por hacer (to-do's). Ambos listados estan relacionados. Permitido el uso de librerias. 
 
-    {
-        "id": "0facd8d3-4361-4ab7-8921-3d57a73b796a",
-        "name": "Diana Lenz",
-        "skills": ["scala","golang"]
+2. Modificar el endpoint /todos de manera que devuelva la lista de tareas con sus usuarios respectivos.
+
+{ 
+        "id": 1,
+        "email": "Sincere@april.biz",
+        "name": "Leanne Graham",
+        "phone": "1-770-736-8031 x56442",
+        "username": "Bret", 
+        "tasks": [
+            {
+                "id": 4,
+                "title": "et porro tempora"
+            },
+            {
+                "id": 8,
+                "title": "quo adipisci enim quam ut ab"
+            }
+        ]
     }
 
+3. Modificar el endpoint /users de manera que devuelva una lista de usuarios con sus tareas respectivas, pero solo mostrando las tareas completadas para cada usuario.
 
-2. Modificar el endpoint POST de manera que reciba candidatos y los almacene en la base de datos creada en el paso 1. La aplicación deberá generar el id de cada usuario. Permitido el uso de librerias.
+La respuesta deberá ser un listado de objetos con la siguiente forma:
 
-* En caso de éxito, devolver el status code adecuado. 
-* Controlar el caso en que el body del request esté vacío retornando un status code adecuado.
-
-3. Modificar el endpoint GET de manera que reciba una lista de skills y devuelva el candidato más adecuado.
-
-* El candidato más adecuado es aquel que cuenta con la mayor cantidad de skills de la lista enviada.
-* Controlar el caso en el que no se envíe ningún skill, devolviendo un status code adecuado.
-* Considerar el caso de no encontrar ningún candidato.
-
-Ambos endpoints deberán demostrar manejo de excepciones, imprimiendo un mensaje en la consola y devolviendo un status code adecuado.
-
-Se evaluará claridad del desarrollo, comprensión de convenciones REST y uso del lenguaje. El uso de status codes responderá al criterio de cada uno.
+    { 
+        "id": 1,
+        "email": "Sincere@april.biz",
+        "name": "Leanne Graham",
+        "phone": "1-770-736-8031 x56442",
+        "username": "Bret", 
+        "tasks": [
+            {
+                "id": 4,
+                "title": "et porro tempora"
+            },
+            {
+                "id": 8,
+                "title": "quo adipisci enim quam ut ab"
+            }
+        ]
+    }
