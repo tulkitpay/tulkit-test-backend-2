@@ -25,7 +25,7 @@ La primera URL nos muestra un listado de usuarios, y la segunda una lista de tar
             "username": "Bret",
             "email": "Sincere@april.biz"
         }
-    },
+    }
 
 3. Modificar el endpoint /users de manera que devuelva una lista de usuarios con sus tareas respectivas, pero solo mostrando las tareas completadas para cada usuario.
 
