@@ -15,23 +15,17 @@ La primera URL nos muestra un listado de usuarios, y la segunda una lista de tar
 
 2. Modificar el endpoint /todos de manera que devuelva la lista de tareas con sus usuarios respectivos.
 
-{ 
+    {
         "id": 1,
-        "email": "Sincere@april.biz",
-        "name": "Leanne Graham",
-        "phone": "1-770-736-8031 x56442",
-        "username": "Bret", 
-        "tasks": [
-            {
-                "id": 4,
-                "title": "et porro tempora"
-            },
-            {
-                "id": 8,
-                "title": "quo adipisci enim quam ut ab"
-            }
-        ]
-    }
+        "title": "delectus aut autem",
+        "completed": false,
+        "user": {
+            "id": 1,
+            "name": "Leanne Graham",
+            "username": "Bret",
+            "email": "Sincere@april.biz"
+        }
+    },
 
 3. Modificar el endpoint /users de manera que devuelva una lista de usuarios con sus tareas respectivas, pero solo mostrando las tareas completadas para cada usuario.
 
