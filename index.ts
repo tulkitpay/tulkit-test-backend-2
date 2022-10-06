@@ -1,18 +1,17 @@
-import express from 'express';
+import express from "express";
+import * as controller from "./src/controllers";
 const app = express();
 app.use(express.json());
-const PORT = process.env.HTTP_PORT || 3000
+const PORT = process.env.HTTP_PORT || 3000;
 
-// Your code starts here. Placeholders for methods are provided for your convenience.
+// Your code starts here. Placeholders for .get and .post are provided for your convenience.
 
-app.post('/todos', function(req, res) {
+app.get("/todos", controller.getToDos);
 
+app.get("/users", controller.getUsers);
+
+app.listen(PORT).on("listening", () => {
+  console.info("Listening on port", PORT);
 });
 
-app.get('/users', function(req, res) {
-
-});
-
-app.listen(PORT).on('listening', () => {
-    console.info('Listening on port', PORT)
-});
+export default app;
